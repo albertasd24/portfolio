@@ -1,0 +1,62 @@
+.cardexperience {
+    border-radius: .3rem;
+    padding: .8rem 1.5rem;
+    display: grid;
+    grid-template-columns: 30% 1fr;
+    background: rgba(255, 255, 255, .25);
+    backdrop-filter: blur(5px);
+    border: 1.5px solid rgba(209, 213, 219, 0.3);
+    min-height: 200px;
+    gap: 10px;
+    min-width: 420px;
+}
+
+.cardexperience p {
+    font-size: .8rem;
+}
+
+.cardexperience .description {
+    text-align: justify;
+    margin:10px 0;
+}
+
+.name-bussines {
+    font-size: 1.4rem;
+}
+
+.cardexperience .role {
+    color: var(--color-primary-blue);
+    text-shadow: 0 0 8px #62dffbab;
+    font-weight: 500;
+    line-height: 1px;
+    margin-top: 3px;
+}
+
+.container-tags {
+    display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.container-tags .tag {
+    color: var(--color-primary-blue);
+    font-weight: 600;
+    border: 1px solid var(--color-primary-blue);
+    padding: 5px 15px;
+    font-size: .8rem;
+    border-radius: 1rem;
+    transition: background .2s ease-in;
+}
+.container-tags .tag:hover {
+    background-color: #62DFFB;
+    border: 1px solid #62DFFB;;
+    box-shadow: 0 0 10px #62DFFB;
+    color: rgb(14, 137, 146);
+    cursor: none;
+}
+
+.content-date{
+    font-weight: 600;
+    padding-top: 5px;
+}

@@ -1,0 +1,7 @@
+.container-cards-experience{
+    display: flex;
+    gap: 20px;
+}
+.section-experience{
+    padding: 2rem;
+}

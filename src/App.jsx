@@ -5,7 +5,9 @@ import { useTranslation } from 'react-i18next'
 import TitleGlitch from './components/TitleGlitch/TitleGlitch'
 import { FaGithub } from 'react-icons/fa'
 import SocialMedia from './components/SocialMedia/SocialMedia'
-
+import imagePerfil from "./assets/image-perfil.png";
+import Experience from './pages/Experiences/Experience'
+import Proyectos from './pages/proyectos/Proyectos'
 
 function App() {
   const { t, i18n } = useTranslation()
@@ -21,14 +23,18 @@ function App() {
 
   return (
     <main>
-      <div className="">
-        <TitleGlitch text={t('development.name')} />
-        <span>Browser Language: {lng}</span>
+      <section className='content-main'>
+        <article className="information-content">
+          <TitleGlitch text={t('development.name')} />
+          <h2 className='role'>{t('development.role')}</h2>
           <SocialMedia />
-      </div>
-      <div className="">
-        <h1>Image</h1>
-      </div>
+        </article>
+        <article className="content-image">
+          <img src={imagePerfil} alt="" />
+        </article>
+      </section>
+      <Experience />
+      <Proyectos />
     </main>
   )
 }
