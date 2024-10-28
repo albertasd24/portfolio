@@ -50,7 +50,7 @@
 }
 .container-tags .tag:hover {
     background-color: #62DFFB;
-    border: 1px solid #62DFFB;;
+    border: 1px solid #62DFFB;
     box-shadow: 0 0 10px #62DFFB;
     color: rgb(14, 137, 146);
     cursor: none;
