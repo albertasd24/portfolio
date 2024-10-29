@@ -7,8 +7,14 @@
     backdrop-filter: blur(5px);
     border: 1.5px solid rgba(209, 213, 219, 0.3);
     min-height: 200px;
+    position: relative;
     gap: 10px;
     min-width: 420px;
+    transition: box-shadow .3s ease-in-out;
+}
+.cardexperience:hover {
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.603);
+
 }
 
 .cardexperience p {
@@ -17,7 +23,7 @@
 
 .cardexperience .description {
     text-align: justify;
-    margin:10px 0;
+    margin: 10px 0;
 }
 
 .name-bussines {
@@ -26,8 +32,9 @@
 
 .cardexperience .role {
     color: var(--color-primary-blue);
-    text-shadow: 0 0 8px #62dffbab;
+    /* text-shadow: 0 0 8px #62dffbab; */
     font-weight: 500;
+    font-size: .9rem;
     line-height: 1px;
     margin-top: 3px;
 }
@@ -48,15 +55,15 @@
     border-radius: 1rem;
     transition: background .2s ease-in;
 }
-.container-tags .tag:hover {
+
+.cardexperience:hover .container-tags .tag {
     background-color: #62DFFB;
     border: 1px solid #62DFFB;
     box-shadow: 0 0 10px #62DFFB;
     color: rgb(14, 137, 146);
-    cursor: none;
 }
 
-.content-date{
+.content-date {
     font-weight: 600;
     padding-top: 5px;
 }
