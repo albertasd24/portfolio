@@ -9,6 +9,7 @@
 
 .cardexperience:hover {
     box-shadow: 0 0 50px rgba(0, 204, 255, 0.623);
+    transform: scale(1.03);
 }
 
 .cardexperience:hover ::-webkit-scrollbar-thumb, .cardexperience:hover ::-webkit-scrollbar-thumb:hover {
