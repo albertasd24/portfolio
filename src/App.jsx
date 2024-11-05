@@ -35,6 +35,9 @@ function App() {
       </section>
       <Experience />
       <Proyectos />
+      <footer>
+        <p> &copy; 2024 Stive Ospina </p>
+      </footer>
     </main>
   )
 }

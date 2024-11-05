@@ -11,9 +11,7 @@ const CardProjects = ({ }) => {
 				<h4>Name Bussines</h4>
 				<p className='description'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa, repellendus! Impedit possimus quam ducimus nostrum voluptatibus velit consequuntur id dolores sint, et placeat voluptate numquam nulla natus quas pariatur nemo aliquam non </p>
 				<div className="container-tags">
-					{/* {tags.map((tag) => ( */}
-						<span className="tag">{"tag"}</span>
-					{/* ))} */}
+			
 				</div>
 			</div>
 		</div>

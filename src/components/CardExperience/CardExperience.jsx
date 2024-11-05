@@ -2,20 +2,17 @@ import './CardExperience.css';
 
 const CardExperience = ({ experience }) => {
 	const { date, nameBussines, description, roleBussines, tags } = experience;
+	const audio = new Audio("https://stivenb23.github.io/Landing-Oshi-No-Ko/assets/audio/audio_win.mp3");
+	const hanldeOver = () => {
+		// audio.play()
+	}
 	return (
-		<div className='cardexperience'>
-			<div className="content-date">
-				<p>{date}</p>
-			</div>
-			<div className="">
-				<h5 className='name-bussines'>{nameBussines || "Name Bussines"}</h5>
-				<p className='role'>{roleBussines || "Role Bussines"}</p>
-				<p className='description'>{description || ""}</p>
-				<div className="container-tags">
-					{tags.map((tag) => (
-						<span className="tag">{tag}</span>
-					))}
-				</div>
+		<div className="cardexperience" onMouseEnter={hanldeOver}>
+			<div className="cardexperience-content">
+				<h4>{roleBussines || "Role Bussines"}</h4>
+				<p className="name-bussines">{nameBussines || "Name Bussines"}</p>
+				<p className="date">{date}</p>
+				<p className="description">{description || ""}</p>
 			</div>
 		</div>
 	);
