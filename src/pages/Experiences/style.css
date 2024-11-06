@@ -1,9 +1,37 @@
-.container-cards-experience{
+.section-experience {
+    position: relative;
+    padding: 2rem;
+    /* background: url("../../assets/image_background_nex.png"); */
+    /* background: linear-gradient(to left, transparent, rgb(17, 28, 53) 70%), url("../../assets/image_background_nex.png"); */
+    /* mask-image: linear-gradient(to left, rgb(17, 28, 53) 10%, transparent); */
+    
+    backdrop-filter: blur(8px);
+}
+
+.section-experience {
+    position: relative;
+    padding: 2rem;
+    background: linear-gradient(to left, transparent, rgb(17, 28, 53) 70%), url("../../assets/image_background_nex.png");
+    mask-image: linear-gradient(to bottom, rgb(17, 28, 53) 80%, transparent);
+}
+
+.section-experience::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to left, transparent, rgb(17, 28, 53) 60%), url("../../assets/image_background_nex.png");
+    filter: blur(4px);
+    z-index: -1; 
+}
+
+
+.container-cards-experience {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     row-gap: 40px;
     column-gap: 20px;
-}
-.section-experience{
-    padding: 2rem;
+    z-index: 20;
 }

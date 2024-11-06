@@ -1,12 +1,15 @@
 .card-projects {
-    background: rgba(255, 255, 255, 0.096);
+    /* background: rgba(255, 0, 162, 0.11); */
+    background: rgb(239, 27, 242, 0.11);
     backdrop-filter: blur(5px);
-    border: 1.5px solid rgba(209, 213, 219, 0.3);
+    border: 2px solid rgb(239, 27, 242);
+
     width: 340px;
     border-radius: .5rem;
     min-height: 350px;
     overflow: hidden;
     color: #ECECEC;
+    animation: lightCard 3s linear infinite;
 }
 
 .card-projects--head {
@@ -19,8 +22,21 @@
     height: 100%;
     object-fit: cover;
     mask-image: linear-gradient(to bottom,
-            rgb(0, 76, 255) 30%,
+            rgb(239, 27, 242) 30%,
             transparent);
+    position: relative;
+}
+
+.card-projects--head::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background: linear-gradient(to bottom, rgba(238, 27, 242, 0.411) 70%, transparent); */
+    background: rgba(238, 27, 242, 0.212);
+    z-index: 20;
 }
 
 .card-projects--body {
@@ -28,6 +44,7 @@
 }
 
 .card-projects .description {
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.712);
     text-align: justify;
     font-size: .8rem;
     margin-bottom: 10px;
@@ -38,4 +55,24 @@
     border: 1px solid #62DFFB;
     box-shadow: 0 0 10px #62DFFB;
     color: rgb(14, 137, 146);
+}
+
+@keyframes lightCard {
+    0% {
+        box-shadow: 0 0 20px rgb(239, 27, 242), inset 0 0 10px rgb(239, 27, 242);
+    }
+
+    20% {
+        box-shadow: 0 0 8px rgba(238, 27, 242, 0.637), inset 0 0 10px rgb(239, 27, 242);
+    }
+    50% {
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.678), inset 0 0 10px rgb(239, 27, 242);
+    }
+    80% {
+        box-shadow: 0 0 8px rgba(238, 27, 242, 0.637), inset 0 0 10px rgb(239, 27, 242);
+    }
+
+    100% {
+        box-shadow: 0 0 20px rgb(239, 27, 242), inset 0 0 10px rgb(239, 27, 242);
+    }
 }

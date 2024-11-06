@@ -1,0 +1,89 @@
+/* Estilos generales de la terminal */
+.terminal {
+    width: 600px;
+    height: 400px;
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+    font-family: 'Courier New', Courier, monospace;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Barra de título de la terminal */
+.terminal-header {
+    display: flex;
+    align-items: center;
+    background-color: #333;
+    padding: 8px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.terminal-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.button.red {
+    background-color: #ff5f57;
+}
+
+.button.yellow {
+    background-color: #febc2e;
+}
+
+.button.green {
+    background-color: #28c940;
+}
+
+.terminal-title {
+    margin-left: auto;
+    margin-right: auto;
+    color: #cccccc;
+    font-size: 14px;
+}
+
+/* Área de comandos */
+.terminal-body {
+    padding: 16px;
+    flex-grow: 1;
+    overflow-y: auto;
+}
+
+.terminal-command {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.prompt {
+    color: #00ff9f;
+    font-weight: bold;
+}
+
+.input {
+    background: none;
+    border: none;
+    outline: none;
+    color: #e0e0e0;
+    font-family: inherit;
+    font-size: 16px;
+    flex-grow: 1;
+}
+
+.input::placeholder {
+    color: #555;
+}
+
+.input:focus {
+    outline: none;
+}

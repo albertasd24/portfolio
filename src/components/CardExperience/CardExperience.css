@@ -5,6 +5,7 @@
     background-color: rgba(0, 204, 255, 0.151);
     border-radius: 48px;
     transition: all .4s ease-in-out;
+    cursor: default;
 }
 
 .cardexperience:hover {
