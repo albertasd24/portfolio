@@ -4,3 +4,30 @@
   gap: 10px;
   font-size: 1.5rem;
 }
+
+/* Responsive */
+/* Tamaño pequeño de móvil - 360×640 (22,64%) */
+@media (min-width: 360px) {}
+
+/* Tamaño medio de móvil - 375×667 (5%) */
+@media (min-width: 375px) {}
+
+/* Tamaño grande de móvil - 720×1280 (2,74%) */
+@media (min-width: 720px) {
+  .social-media {
+    display: flex;
+    width: 50%;
+    gap: 10px;
+    font-size: 2.8rem;
+  }
+
+}
+
+/* Tamaño medio de portátil - 1366×768 (11,98%) */
+@media (min-width: 1366px) {}
+
+/* Tamaño medio de escritorio - 1440×900 (3,17%) */
+@media (min-width: 1440px) {}
+
+/* Tamaño grande de escritorio - 1920×1080 (7,35%) */
+@media (min-width: 1920px) {}

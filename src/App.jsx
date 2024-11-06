@@ -1,5 +1,4 @@
-import { useEffect, useState } from 'react'
-import reactLogo from './assets/react.svg'
+import { useEffect, useRef, useState } from 'react'
 import './App.css'
 import { useTranslation } from 'react-i18next'
 import TitleGlitch from './components/TitleGlitch/TitleGlitch'
@@ -14,11 +13,34 @@ import { SiFastapi, SiMongodb, SiMysql, SiNestjs, SiSpringboot, SiSqlite, SiType
 import { BiLogoPostgresql } from 'react-icons/bi'
 import { RiNextjsLine } from 'react-icons/ri'
 import Terminal from './components/Terminal/Terminal'
-
+import emailjs from 'emailjs-com';
 function App() {
   const { t, i18n } = useTranslation()
-  const [count, setCount] = useState(0)
+  const formRef = useRef();  // Añadir referencia para el formulario
+  const [form, setForm] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    matter: '',
+    message: ''
+  });
 
+  const updateData = (data) => {
+    setForm({ ...form, ...data })
+  }
+
+  const sendData = (e) => {
+    e.preventDefault();
+    console.log(form);
+
+    emailjs.sendForm('service_gnqhs2f', 'template_z46px2c', formRef.current, 'tGv94dHnsHmbsh8WO')
+      .then((result) => {
+        console.log('Correo enviado:', result.text);
+      })
+      .catch((error) => {
+        console.log('Error al enviar el correo:', error.text);
+      });
+  };
   useEffect(() => {
     const lng = navigator.language;
     i18n.changeLanguage(lng);
@@ -34,17 +56,17 @@ function App() {
           <TitleGlitch text={t('development.name')} />
           <h2 className='role'>{t('development.role')}</h2>
           <SocialMedia />
+          <img src={imagePerfil} alt="" className='image-avatar' />
         </article>
-        <article className="content-image">
+        {/* <article className="content-image">
           <img src={imagePerfil} alt="" />
-        </article>
+        </article> */}
       </section>
       <Experience />
       <Proyectos />
       <section className='section-tecnologies'>
         <h2 className='section-title'>Tecnologías</h2>
         <article className='tecnologies'>
-
           <FaHtml5 />
           <FaCss3Alt />
           <IoLogoJavascript />
@@ -75,29 +97,30 @@ function App() {
       </section>
       <section className='section-contact'>
         <h2 className='section-title'>Contacto</h2>
-        <form action="" className='form-contact'>
+        <form ref={formRef} onSubmit={sendData} className='form-contact'>
           <div className="contact-inputs">
             <div className="">
-              <label htmlFor="">Nombre Completo</label>
-              <input type="text" name="" id="" />
+              <label htmlFor="name">Nombre Completo</label>
+              <input type="text" name="name" onChange={(e) => updateData({ "name": e.target.value })} required />
             </div>
             <div className="">
-              <label htmlFor="">Correo</label>
-              <input type="text" name="" id="" />
+              <label htmlFor="email">Correo</label>
+              <input type="email" name="email" onChange={(e) => updateData({ "email": e.target.value })} required />
             </div>
             <div className="">
-              <label htmlFor="">Número telefonico</label>
-              <input type="text" name="" id="" />
+              <label htmlFor="phone">Número telefónico</label>
+              <input type="text" name="phone" onChange={(e) => updateData({ "phone": e.target.value })} />
             </div>
             <div className="">
-              <label htmlFor="">Asunto</label>
-              <input type="text" name="" id="" />
+              <label htmlFor="matter">Asunto</label>
+              <input type="text" name="matter" onChange={(e) => updateData({ "matter": e.target.value })} required />
             </div>
           </div>
           <div className="">
-            <label htmlFor="">Mensaje</label>
-            <textarea name="" id=""></textarea>
+            <label htmlFor="message">Mensaje</label>
+            <textarea name="message" onChange={(e) => updateData({ "message": e.target.value })} required></textarea>
           </div>
+          <button type="submit">Enviar</button>
         </form>
       </section>
       <footer>
