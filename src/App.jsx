@@ -56,11 +56,8 @@ function App() {
           <TitleGlitch text={t('development.name')} />
           <h2 className='role'>{t('development.role')}</h2>
           <SocialMedia />
-          <img src={imagePerfil} alt="" className='image-avatar' />
         </article>
-        {/* <article className="content-image">
-          <img src={imagePerfil} alt="" />
-        </article> */}
+        <img src={imagePerfil} alt="" className='image-avatar' />
       </section>
       <Experience />
       <Proyectos />
@@ -96,31 +93,35 @@ function App() {
         {/* <Terminal /> */}
       </section>
       <section className='section-contact'>
-        <h2 className='section-title'>Contacto</h2>
+
         <form ref={formRef} onSubmit={sendData} className='form-contact'>
+          <div className="">
+            <h2 >Cuentame Tu Idea</h2>
+            <p>No dudes en contactarme para cualquier consulta, colaboración o para discutir proyectos. Estoy aquí para ayudarte y explorar cómo puedo apoyar tus necesidades de desarrollo. Puedes comunicarte conmigo por teléfono, correo electrónico o completando el formulario de contacto a continuación. <b>¡Espero saber de ti pronto!</b></p>
+          </div>
           <div className="contact-inputs">
             <div className="">
-              <label htmlFor="name">Nombre Completo</label>
-              <input type="text" name="name" onChange={(e) => updateData({ "name": e.target.value })} required />
+              <label htmlFor="name">Nombre Completo <span className='important' >*</span></label>
+              <input type="text" name="name" autoComplete='off' onChange={(e) => updateData({ "name": e.target.value })} required />
             </div>
             <div className="">
-              <label htmlFor="email">Correo</label>
-              <input type="email" name="email" onChange={(e) => updateData({ "email": e.target.value })} required />
+              <label htmlFor="email">Correo <span className='important' >*</span></label>
+              <input type="email" name="email" autoComplete='off' onChange={(e) => updateData({ "email": e.target.value })} required />
             </div>
             <div className="">
               <label htmlFor="phone">Número telefónico</label>
               <input type="text" name="phone" onChange={(e) => updateData({ "phone": e.target.value })} />
             </div>
             <div className="">
-              <label htmlFor="matter">Asunto</label>
+              <label htmlFor="matter">Asunto <span className='important' >*</span></label>
               <input type="text" name="matter" onChange={(e) => updateData({ "matter": e.target.value })} required />
             </div>
+            <div className="">
+              <label htmlFor="message">Mensaje <span className='important' >*</span></label>
+              <textarea name="message" onChange={(e) => updateData({ "message": e.target.value })} required></textarea>
+              <button type="submit">Enviar</button>
+            </div>
           </div>
-          <div className="">
-            <label htmlFor="message">Mensaje</label>
-            <textarea name="message" onChange={(e) => updateData({ "message": e.target.value })} required></textarea>
-          </div>
-          <button type="submit">Enviar</button>
         </form>
       </section>
       <footer>

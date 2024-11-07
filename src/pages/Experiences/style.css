@@ -110,4 +110,8 @@
 }
 
 /* Tamaño grande de escritorio - 1920×1080 (7,35%) */
-@media (min-width: 1920px) {}
+@media (min-width: 1920px) {
+    .section-experience{
+        padding: 1rem 4rem;
+    }
+}

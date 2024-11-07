@@ -103,7 +103,7 @@
     z-index: 10;
     min-height: 245px;
     min-width: 320px;
-    width: 100%;
+    width: 90%;
     max-width: 400px;
     padding: 1rem .5rem;
     top: 50%;
@@ -131,9 +131,9 @@
 .cardexperience-content .description {
     color: #ffffff;
     height: 125px;
-    text-shadow: 0 0 4px rgb(2, 104, 129);
+    text-shadow: 0 0 5px rgb(2, 81, 100);
     text-align: justify;
-    font-size: 1rem;
+    font-size: 1.1rem;
     overflow: auto;
     padding-right: 2px;
     margin-top: 5px;
