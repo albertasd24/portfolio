@@ -14,6 +14,7 @@ import { BiLogoPostgresql } from 'react-icons/bi'
 import { RiNextjsLine } from 'react-icons/ri'
 import Terminal from './components/Terminal/Terminal'
 import emailjs from 'emailjs-com';
+import TitleRandom from './components/TitleRandom/TitleRandom'
 function App() {
   const { t, i18n } = useTranslation()
   const formRef = useRef();  // Añadir referencia para el formulario
@@ -24,6 +25,36 @@ function App() {
     matter: '',
     message: ''
   });
+
+  useEffect(() => {
+    const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    const h2Element = document.querySelector("h2");
+
+    const handleMouseOver = (event) => {
+      let iterations = 0;
+      const intervalT = setInterval(() => {
+        event.target.innerText = event.target.innerText
+          .split("")
+          .map((letter, index) => {
+            if (index < iterations) {
+              return event.target.dataset.value[index];
+            }
+            return letters[Math.floor(Math.random() * 26)];
+          })
+          .join("");
+
+        if (iterations >= event.target.dataset.value.length) {
+          clearInterval(intervalT);
+        }
+
+        iterations += 1 / 3;
+      }, 30);
+    };
+
+    h2Element.addEventListener("mouseover", handleMouseOver);
+
+    return () => h2Element.removeEventListener("mouseover", handleMouseOver);
+  }, []);
 
   const updateData = (data) => {
     setForm({ ...form, ...data })
@@ -54,7 +85,7 @@ function App() {
       <section className='content-main'>
         <article className="information-content">
           <TitleGlitch text={t('development.name')} />
-          <h2 className='role'>{t('development.role')}</h2>
+          <TitleRandom title={t('development.role')} className='role' />
           <SocialMedia />
         </article>
         <img src={imagePerfil} alt="" className='image-avatar' />
@@ -62,7 +93,7 @@ function App() {
       <Experience />
       <Proyectos />
       <section className='section-tecnologies'>
-        <h2 className='section-title'>Tecnologías</h2>
+        <TitleRandom title='Tecnologías' className='section-title' />
         <article className='tecnologies'>
           <FaHtml5 />
           <FaCss3Alt />

@@ -7,7 +7,7 @@
 .section-experience {
     position: relative;
     /* padding: 2rem; */
-    background: linear-gradient(to left, transparent, rgb(17, 28, 53) 70%), url("../../assets/image_background_nex.png");
+    background: linear-gradient(to left, transparent, rgb(17, 28, 53) 70%), url("../../assets/BackgroundScarletNex.jpg");
     mask-image: linear-gradient(to bottom, rgb(17, 28, 53) 90%, transparent);
 }
 
@@ -18,7 +18,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(to left, transparent, rgba(17, 28, 53, 0.966) 60%), url("../../assets/image_background_nex.png");
+    background: linear-gradient(to left, transparent, rgba(17, 28, 53, 0.966) 60%), url("../../assets/BackgroundScarletNex.jpg");
     filter: blur(4px);
     z-index: -1; 
 }
