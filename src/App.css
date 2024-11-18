@@ -228,7 +228,7 @@
     .information-content .role {
         font-weight: 400;
         font-size: clamp(40px, 4vw, 24px);
-        text-shadow: 0 0 10px #000;
+        text-shadow: 0 0 10px #ffffff;
     }
 
     .image-avatar {
