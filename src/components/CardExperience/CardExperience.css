@@ -1,8 +1,5 @@
 .cardexperience {
     min-height: 250px;
-    /* min-width: 420px; */
-    width: 100%;
-    /* border: 1px solid red; */
     position: relative;
     background-color: rgba(0, 204, 255, 0.151);
     border-radius: 48px;

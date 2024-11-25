@@ -95,31 +95,81 @@ function App() {
       <section className='section-tecnologies'>
         <TitleRandom title='Tecnologías' className='section-title' />
         <article className='tecnologies'>
-          <FaHtml5 />
-          <FaCss3Alt />
-          <IoLogoJavascript />
-          <FaJava />
-          <SiSpringboot />
-          <FaPhp />
-          <FaLaravel />
-          <FaVuejs />
-          <SiTypescript />
-          <SiNestjs />
-          <RiNextjsLine />
-          <FaReact />
-          <FaPython />
-          <SiFastapi />
-          <SiMysql />
-          <BiLogoPostgresql />
-          <SiSqlite />
-          <SiMongodb />
-          <SiUml />
-          <FaNode />
-          <IoTerminal />
-          <FaDocker />
-          <FaFigma />
-          <FaGitAlt />
-          <FaGithub />
+          <div className="technologies-card">
+            <FaHtml5 />
+          </div>
+          <div className="technologies-card">
+            <FaCss3Alt />
+          </div>
+          <div className="technologies-card">
+            <IoLogoJavascript />
+          </div>
+          <div className="technologies-card">
+            <FaJava />
+          </div>
+          <div className="technologies-card">
+            <SiSpringboot />
+          </div>
+          <div className="technologies-card">
+            <FaPhp />
+          </div>
+          <div className="technologies-card">
+            <FaVuejs />
+          </div>
+          <div className="technologies-card">
+            <SiTypescript />
+          </div>
+          <div className="technologies-card">
+            <SiNestjs />
+          </div>
+          <div className="technologies-card">
+            <RiNextjsLine />
+          </div>
+          <div className="technologies-card">
+            <FaReact />
+          </div>
+          <div className="technologies-card">
+            <FaPython />
+          </div>
+          <div className="technologies-card">
+
+            <SiFastapi />
+          </div>
+          <div className="technologies-card">
+            <SiMysql />
+          </div>
+          <div className="technologies-card">
+            <BiLogoPostgresql />
+          </div>
+          <div className="technologies-card">
+            <SiSqlite />
+          </div>
+          <div className="technologies-card">
+            <SiMongodb />
+          </div>
+          <div className="technologies-card">
+            <SiUml />
+          </div>
+          <div className="technologies-card">
+            <FaNode />
+          </div>
+          <div className="technologies-card">
+            <IoTerminal />
+          </div>
+          <div className="technologies-card">
+            <FaDocker />
+          </div>
+          <div className="technologies-card">
+            <FaGitAlt />
+          </div>
+          <div className="technologies-card">
+            <FaFigma />
+          </div>
+          <div className="technologies-card">
+            <FaGithub />
+          </div>
+
+
         </article>
         {/* <Terminal /> */}
       </section>

@@ -1,10 +1,11 @@
 import './CardExperience.css';
-
+import audioMP3 from "../../assets/audio/message.mp3"
 const CardExperience = ({ experience }) => {
 	const { date, nameBussines, description, roleBussines, tags } = experience;
-	const audio = new Audio("https://stivenb23.github.io/Landing-Oshi-No-Ko/assets/audio/audio_win.mp3");
+	const audio = new Audio(audioMP3);
 	const hanldeOver = () => {
-		// audio.play()
+		audio.play()
+		audio.volume = 1;
 	}
 	return (
 		<div className="cardexperience" onMouseEnter={hanldeOver}>
