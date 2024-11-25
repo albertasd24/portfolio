@@ -1,5 +1,5 @@
 .hero {
-    font-size: clamp(30px, 10vw, 110px);
+    font-size: clamp(45px, 10vw, 70px);
     line-height: 1;
     display: inline-block;
     color: #fff;
@@ -463,7 +463,7 @@
 
 @media (min-width: 360px) {
     .hero {
-        font-size: clamp(50px, 10vw, 70px);
+        font-size: clamp(45px, 10vw, 70px);
     }
 }
 
@@ -481,7 +481,7 @@
 
 @media (min-width: 720px) {
     .hero {
-        font-size: clamp(45px, 6vw, 70px);
+        font-size: clamp(70px, 6vw, 70px);
     }
 }
 
