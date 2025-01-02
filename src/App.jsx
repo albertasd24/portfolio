@@ -4,12 +4,12 @@ import { useTranslation } from 'react-i18next'
 import TitleGlitch from './components/TitleGlitch/TitleGlitch'
 import { FaCss3Alt, FaDocker, FaFigma, FaGitAlt, FaGithub, FaHtml5, FaJava, FaLaravel, FaNode, FaPhp, FaPython, FaReact, FaVuejs } from 'react-icons/fa'
 import SocialMedia from './components/SocialMedia/SocialMedia'
-import imagePerfil from "./assets/image-perfil.png";
+import imagePerfil from "./assets/Image_Perfil.png";
 import Experience from './pages/Experiences/Experience'
 import Proyectos from './pages/proyectos/Proyectos'
 import { IoLogoJavascript } from 'react-icons/io'
 import { IoTerminal } from 'react-icons/io5'
-import { SiFastapi, SiMongodb, SiMysql, SiNestjs, SiSpringboot, SiSqlite, SiTypescript, SiUml } from 'react-icons/si'
+import { SiAngular, SiExpress, SiFastapi, SiMongodb, SiMysql, SiNestjs, SiSpringboot, SiSqlite, SiTypescript, SiUml } from 'react-icons/si'
 import { BiLogoPostgresql } from 'react-icons/bi'
 import { RiNextjsLine } from 'react-icons/ri'
 import Terminal from './components/Terminal/Terminal'
@@ -114,7 +114,16 @@ function App() {
             <FaPhp />
           </div>
           <div className="technologies-card">
+            <FaLaravel />
+          </div>
+          <div className="technologies-card">
+            <FaReact />
+          </div>
+          <div className="technologies-card">
             <FaVuejs />
+          </div>
+          <div className="technologies-card">
+            <SiAngular />
           </div>
           <div className="technologies-card">
             <SiTypescript />
@@ -126,13 +135,9 @@ function App() {
             <RiNextjsLine />
           </div>
           <div className="technologies-card">
-            <FaReact />
-          </div>
-          <div className="technologies-card">
             <FaPython />
           </div>
           <div className="technologies-card">
-
             <SiFastapi />
           </div>
           <div className="technologies-card">
@@ -154,6 +159,9 @@ function App() {
             <FaNode />
           </div>
           <div className="technologies-card">
+          <SiExpress />
+          </div>
+          <div className="technologies-card">
             <IoTerminal />
           </div>
           <div className="technologies-card">
@@ -169,7 +177,6 @@ function App() {
             <FaGithub />
           </div>
 
-
         </article>
         {/* <Terminal /> */}
       </section>
@@ -178,7 +185,7 @@ function App() {
         <form ref={formRef} onSubmit={sendData} className='form-contact'>
           <div className="">
             <h2 >Cuentame Tu Idea</h2>
-            <p>No dudes en contactarme para cualquier consulta, colaboración o para discutir proyectos. Estoy aquí para ayudarte y explorar cómo puedo apoyar tus necesidades de desarrollo. Puedes comunicarte conmigo por teléfono, correo electrónico o completando el formulario de contacto a continuación. <b>¡Espero saber de ti pronto!</b></p>
+            <p>No dudes en contactarme para cualquier consulta 💡, colaboración 🤝 o para discutir proyectos 🚀. Estoy aquí para ayudarte y explorar cómo puedo apoyar tus necesidades de desarrollo 🛠️. Puedes comunicarte conmigo por teléfono 📞, correo electrónico 📧 o completando el formulario de contacto a continuación 📝.<b>¡Espero saber de ti pronto! 🌟</b></p>
           </div>
           <div className="contact-inputs">
             <div className="">
@@ -205,9 +212,14 @@ function App() {
           </div>
         </form>
       </section>
-      <footer>
-        <p> &copy; 2024 Stive Ospina </p>
+      <footer className="footer">
+        <div className="footer-about">
+          <h3>Albert Ospina</h3>
+          <p>Desarrollador Fullstack | Apasionado por la tecnología y el aprendizaje continuo. &copy; 2025 Todos los Derechos Reservados</p>
+        </div>
       </footer>
+
+
     </main>
   )
 }
