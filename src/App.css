@@ -15,7 +15,8 @@
     justify-content: start;
     flex-direction: column;
     align-items: start;
-    padding: 8rem 2rem 2rem 2rem;
+    /* padding: 8rem 2rem 2rem 2rem; */
+    padding: 8rem 2rem 2rem 1rem;
     position: relative;
     z-index: 50;
     background: linear-gradient(to right, rgba(17, 28, 53, 0.87) 20%, transparent), url('./assets/image-background-1.jpg');
@@ -34,10 +35,11 @@
     width: 400px;
     top: 45%;
     left: 50%;
-    mask-image: linear-gradient(#000000cc 90%, transparent);
+    mask-image: linear-gradient(#000000 90%, transparent);
     transform: translateX(-50%);
     z-index: 1200;
 }
+
 /* Sección 2 */
 .content-image {
     display: none;
@@ -53,21 +55,21 @@
 .tecnologies {
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
-    gap: 10px 20px;
+    /* gap: 10px 20px; */
+    gap: 10px 5px;
     color: rgba(201, 201, 201, 0.719);
-    padding: .5rem 1rem;
 }
 
-.technologies-card{
+.technologies-card {
     padding: 10px 20px;
     background-color: rgba(201, 201, 201, 0.233);
     border-radius: 10px;
     transition: all .2s ease-in-out;
 }
 
-.technologies-card:hover{
+.technologies-card:hover {
     background-color: rgba(201, 201, 201, 0);
 }
 
@@ -203,12 +205,57 @@
         0 0 8px rgb(243, 22, 22);
 }
 
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.footer-about {
+    max-width: 90%;
+    /* Limita el ancho del contenido */
+}
+
+@media (max-width: 768px) {
+
+    /* Para tablets y dispositivos móviles */
+    .footer {
+        flex-direction: column;
+        /* Cambia el diseño a columna */
+        padding: 1.5rem 1rem;
+    }
+
+    .footer-about h3 {
+        font-size: 1.5rem;
+        /* Ajusta el tamaño del texto */
+    }
+
+    .footer-about p {
+        font-size: 1rem;
+        /* Reduce el tamaño del párrafo */
+        line-height: 1.5;
+        /* Mejora la legibilidad */
+    }
+}
+
+
+
 /* Responsive */
 /* Tamaño pequeño de móvil - 360×640 (22,64%) */
 @media (min-width: 360px) {}
 
 /* Tamaño medio de móvil - 375×667 (5%) */
 @media (min-width: 375px) {}
+
+@media (min-width: 410px) {
+    .image-avatar {
+        width: 420px;
+        top: 47%;
+    }
+}
 
 /* Tamaño grande de móvil - 720×1280 (2,74%) */
 @media (min-width: 720px) {
@@ -226,7 +273,7 @@
         width: 90%;
         top: 33%;
         left: 65%;
-        mask-image: linear-gradient(#000000de 92%, transparent);
+        mask-image: linear-gradient(#000000f3 92%, transparent);
     }
 
     .form-contact {
@@ -277,6 +324,7 @@
 
     .form-contact {
         width: 60%;
+        margin-left: 2rem;
         padding: 2rem 1.8rem;
         background-color: #222222c4;
         display: grid;
@@ -314,7 +362,7 @@
         width: 43%;
         top: 8%;
         left: 71%;
-        mask-image: linear-gradient(#0000008c 92%, transparent);
+        mask-image: linear-gradient(#000000c7 92%, transparent);
     }
 
     .section-tecnologies {

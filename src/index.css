@@ -64,6 +64,6 @@ button:hover {
   background-color: #8d8d8d;
 }
 
-footer {
-  height: 10vh;
+::selection{
+  background-color: #3CB8F8;
 }
