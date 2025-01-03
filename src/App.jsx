@@ -15,6 +15,7 @@ import { RiNextjsLine } from 'react-icons/ri'
 import Terminal from './components/Terminal/Terminal'
 import emailjs from 'emailjs-com';
 import TitleRandom from './components/TitleRandom/TitleRandom'
+import { GrTest } from 'react-icons/gr'
 function App() {
   const { t, i18n } = useTranslation()
   const formRef = useRef();  // Añadir referencia para el formulario
@@ -159,7 +160,10 @@ function App() {
             <FaNode />
           </div>
           <div className="technologies-card">
-          <SiExpress />
+          <GrTest />
+          </div>
+          <div className="technologies-card">
+            <SiExpress />
           </div>
           <div className="technologies-card">
             <IoTerminal />
