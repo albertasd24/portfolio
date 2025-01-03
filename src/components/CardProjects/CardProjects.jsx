@@ -1,6 +1,7 @@
 
 import './CardProjects.css';
 import image from '../../assets/image_card_project.png'
+import { FaExternalLinkAlt } from 'react-icons/fa';
 const CardProjects = ({ project }) => {
 	const { title, description, linkGithub } = project;
 	return (
@@ -10,7 +11,7 @@ const CardProjects = ({ project }) => {
 					<img src={image} alt="" />
 				</div>
 				<div className="card-projects--body">
-					<h4>{title}</h4>
+					<h4>{title} <FaExternalLinkAlt /></h4>
 					<p className='description'>{description}</p>
 				</div>
 			</div>
